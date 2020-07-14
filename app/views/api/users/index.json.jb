@@ -1,0 +1,7 @@
+@users.map do |user|
+  {
+    email: user.email,
+    username: user.username,
+    password_digest: user.password_digest,
+  }
+end

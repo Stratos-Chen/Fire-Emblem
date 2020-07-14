@@ -1,0 +1,357 @@
+
+  {
+    'shortName': 'Thief',
+    'name': 'Thief ( GHB)',
+    'moveType': 'Infantry',
+    'weaponType': 'Colorless Dagger',
+    'skills': [
+      {
+        'name': 'Silver Dagger+',
+        'rarity': '-',
+      },
+    ],
+    'stats': {
+      '1': {
+        '5': {
+          'hp': '-',
+          'atk': '-',
+          'spd': '-',
+          'def': '-',
+          'res': '-',
+        },
+      },
+      '40': {
+        '5': {
+          'hp': [44],
+          'atk': [28],
+          'spd': [39],
+          'def': [14],
+          'res': [32],
+        },
+      },
+    },
+  },
+  {
+    'shortName': 'Fighter',
+    'name': 'Axe Fighter ( GHB)',
+    'moveType': 'Infantry',
+    'weaponType': 'Green Axe',
+    'skills': [
+      {
+        'name': 'Hammer+',
+        'rarity': '-',
+      },
+    ],
+    'stats': {
+      '1': {
+        '5': {
+          'hp': '-',
+          'atk': '-',
+          'spd': '-',
+          'def': '-',
+          'res': '-',
+        },
+      },
+      '40': {
+        '5': {
+          'hp': [52],
+          'atk': [31],
+          'spd': [31],
+          'def': [30],
+          'res': [23],
+        },
+      },
+    },
+  },
+  {
+    'shortName': 'Cleric',
+    'name': 'Cleric ( GHB)',
+    'moveType': 'Infantry',
+    'weaponType': 'Colorless Staff',
+    'skills': [
+      {
+        'name': 'Gravity',
+        'rarity': '-',
+      },
+    ],
+    'stats': {
+      '1': {
+        '5': {
+          'hp': '-',
+          'atk': '-',
+          'spd': '-',
+          'def': '-',
+          'res': '-',
+        },
+      },
+      '40': {
+        '5': {
+          'hp': [42],
+          'atk': [28],
+          'spd': [28],
+          'def': [24],
+          'res': [36],
+        },
+      },
+    },
+  },
+  {
+    'shortName': 'Blue Mage',
+    'name': 'Blue Mage ( GHB)',
+    'moveType': 'Infantry',
+    'weaponType': 'Blue Tome',
+    'skills': [
+      {
+        'name': 'Thoron+',
+        'rarity': '-',
+      },
+    ],
+    'stats': {
+      '1': {
+        '5': {
+          'hp': '-',
+          'atk': '-',
+          'spd': '-',
+          'def': '-',
+          'res': '-',
+        },
+      },
+      '40': {
+        '5': {
+          'hp': [45],
+          'atk': [31],
+          'spd': [32],
+          'def': [20],
+          'res': [28],
+        },
+      },
+    },
+  },
+  {
+    'shortName': 'Knight',
+    'name': 'Axe Knight ( GHB)',
+    'moveType': 'Armored',
+    'weaponType': 'Green Axe',
+    'skills': [
+      {
+        'name': 'Silver Axe+',
+        'rarity': '-',
+      },
+    ],
+    'stats': {
+      '1': {
+        '5': {
+          'hp': '-',
+          'atk': '-',
+          'spd': '-',
+          'def': '-',
+          'res': '-',
+        },
+      },
+      '40': {
+        '5': {
+          'hp': [67],
+          'atk': [39],
+          'spd': [16],
+          'def': [41],
+          'res': [19],
+        },
+      },
+    },
+  },
+  {
+    'shortName': 'Flier',
+    'name': 'Lance Flier ( GHB)',
+    'moveType': 'Flying',
+    'weaponType': 'Blue Lance',
+    'skills': [
+      {
+        'name': 'Silver Lance+',
+        'rarity': '-',
+      },
+    ],
+    'stats': {
+      '1': {
+        '5': {
+          'hp': '-',
+          'atk': '-',
+          'spd': '-',
+          'def': '-',
+          'res': '-',
+        },
+      },
+      '40': {
+        '5': {
+          'hp': [45],
+          'atk': [28],
+          'spd': [36],
+          'def': [22],
+          'res': [37],
+        },
+      },
+    },
+  },
+  {
+    'shortName': 'Cavalier',
+    'name': 'Sword Cavalier ( GHB)',
+    'moveType': 'Cavalry',
+    'weaponType': 'Red Sword',
+    'skills': [
+      {
+        'name': 'Silver Sword+',
+        'rarity': '-',
+      },
+    ],
+    'stats': {
+      '1': {
+        '5': {
+          'hp': '-',
+          'atk': '-',
+          'spd': '-',
+          'def': '-',
+          'res': '-',
+        },
+      },
+      '40': {
+        '5': {
+          'hp': [49],
+          'atk': [35],
+          'spd': [25],
+          'def': [26],
+          'res': [30],
+        },
+      },
+    },
+  },
+  {
+    'shortName': 'Cavalier',
+    'name': 'Bow Cavalier ( GHB)',
+    'moveType': 'Cavalry',
+    'weaponType': 'Colorless Bow',
+    'skills': [
+      {
+        'name': 'Silver Bow+',
+        'rarity': '-',
+      },
+    ],
+    'stats': {
+      '1': {
+        '5': {
+          'hp': '-',
+          'atk': '-',
+          'spd': '-',
+          'def': '-',
+          'res': '-',
+        },
+      },
+      '40': {
+        '5': {
+          'hp': [48],
+          'atk': [36],
+          'spd': [23],
+          'def': [25],
+          'res': [24],
+        },
+      },
+    },
+  },
+  {
+    'shortName': 'Troubadour',
+    'name': 'Troubadour ( GHB)',
+    'moveType': 'Cavalry',
+    'weaponType': 'Colorless Staff',
+    'skills': [
+      {
+        'name': 'Fear',
+        'rarity': '-',
+      },
+      {
+        'name': 'Rehabilitate',
+        'rarity': '-',
+      },
+    ],
+    'stats': {
+      '1': {
+        '5': {
+          'hp': '-',
+          'atk': '-',
+          'spd': '-',
+          'def': '-',
+          'res': '-',
+        },
+      },
+      '40': {
+        '5': {
+          'hp': [36],
+          'atk': [32],
+          'spd': [22],
+          'def': [20],
+          'res': [42],
+        },
+      },
+    },
+  },
+  {
+    'shortName': 'Bow Fighter',
+    'name': 'Bow Fighter ( GHB)',
+    'moveType': 'Infantry',
+    'weaponType': 'Colorless Bow',
+    'skills': [
+      {
+        'name': 'Silver Bow+',
+        'rarity': '-',
+      },
+    ],
+    'stats': {
+      '1': {
+        '5': {
+          'hp': '-',
+          'atk': '-',
+          'spd': '-',
+          'def': '-',
+          'res': '-',
+        },
+      },
+      '40': {
+        '5': {
+          'hp': [51],
+          'atk': [32],
+          'spd': [29],
+          'def': [29],
+          'res': [16],
+        },
+      },
+    },
+  },
+  {
+    'shortName': 'Cavalier',
+    'name': 'Green Cavalier ( GHB)',
+    'moveType': 'Cavalry',
+    'weaponType': 'Green Tome',
+    'skills': [
+      {
+        'name': 'Gronnwolf+',
+        'rarity': '-',
+      },
+    ],
+    'stats': {
+      '1': {
+        '5': {
+          'hp': '-',
+          'atk': '-',
+          'spd': '-',
+          'def': '-',
+          'res': '-',
+        },
+      },
+      '40': {
+        '5': {
+          'hp': [40],
+          'atk': [36],
+          'spd': [26],
+          'def': [17],
+          'res': [35],
+        },
+      },
+    },
+  },
