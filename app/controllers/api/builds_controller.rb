@@ -1,4 +1,6 @@
 class Api::BuildsController < ApplicationController
+  before_action :authenticate_user, except: [:index, :show]
+
   def index
     @builds = Build.all
     render "index.json.jb"
@@ -12,12 +14,13 @@ class Api::BuildsController < ApplicationController
       special: params[:special],
       passivea: params[:passivea],
       passiveb: params[:passiveb],
-      passivec: params[:passivec]
+      passivec: params[:passivec],
+      user_id: current_user.id
     )
     if @build.save
       render "show.json.jb"
     else
-      render json: {errors: @build.errors.full_messages}, status: unprocessable_entity
+      render json: {errors: @build.errors.full_messages}, status: :bad_request
     end
   end
 
@@ -39,7 +42,7 @@ class Api::BuildsController < ApplicationController
     if @build.save
       render "show.json.jb"
     else
-      render json: {errors: @build.error.full_message}, status: unprocessable_entity
+      render json: {errors: @build.errors.full_messages}, status: :bad_request
     end
   end
 

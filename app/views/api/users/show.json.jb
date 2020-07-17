@@ -1,4 +1,5 @@
 {
+  id: @user.id,
   email: @user.email,
   username: @user.username,
   password_digest: @user.password_digest,

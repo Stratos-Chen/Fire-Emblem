@@ -1,10 +1,11 @@
 @builds.map do |build|
   {
+    id: build.id,
     hero_name: build.hero_name,
     hero_image_url: build.hero_image_url,
     weapon_skill_name: build.weapon_skill_name,
     assist: build.assist,
-    speical: build.special,
+    special: build.special,
     passivea: build.passivea,
     passiveb: build.passiveb,
     passivec: build.passivec,
