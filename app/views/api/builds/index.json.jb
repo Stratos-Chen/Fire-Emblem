@@ -1,14 +1,3 @@
 @builds.map do |build|
-  {
-    id: build.id,
-    hero_name: build.hero_name,
-    hero_image_url: build.hero_image_url,
-    weapon_skill_name: build.weapon_skill_name,
-    assist: build.assist,
-    special: build.special,
-    passivea: build.passivea,
-    passiveb: build.passiveb,
-    passivec: build.passivec,
-    user_id: build.user_id,
-  }
+  render partial: "build.json.jb", locals: {build: build}
 end

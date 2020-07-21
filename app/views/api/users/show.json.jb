@@ -1,6 +1,7 @@
-{
-  id: @user.id,
-  email: @user.email,
-  username: @user.username,
-  password_digest: @user.password_digest,
-}
+user = render partial: "user.json.jb", locals: {user: @user}
+
+user[:build] = @user.builds.map do |build|
+  render partial: "api/builds/build.json.jb", locals: {build: build}
+end
+
+user

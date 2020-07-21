@@ -1,8 +1,8 @@
 class Api::BuildsController < ApplicationController
-  before_action :authenticate_user, except: [:index, :show]
+  before_action :authenticate_user
 
   def index
-    @builds = Build.all
+    @builds = current_user.builds
     render "index.json.jb"
   end
   def create

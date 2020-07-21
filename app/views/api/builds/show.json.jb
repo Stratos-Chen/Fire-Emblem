@@ -1,12 +1,9 @@
-{
-  id: @build.id,
-  hero_name: @build.hero_name,
-  hero_image_url: @build.hero_image_url,
-  weapon_skill_name: @build.weapon_skill_name,
-  assist: @build.assist,
-  special: @build.special,
-  passivea: @build.passivea,
-  passiveb: @build.passiveb,
-  passivec: @build.passivec,
-  user_id: @build.user_id,
-}
+build = render partial: "build.json.jb", locals: {build: @build}
+
+build[:user] = render partial: "api/users/user.json.jb", locals: {user: @build.user}
+
+if current_user
+  build[:owner] = (@build.user_id == current_user.id)
+end
+
+build
