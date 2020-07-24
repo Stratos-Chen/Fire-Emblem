@@ -1,0 +1,2 @@
+heroe = JSON.parse(@heroe.body)["heroes"].detect {|hero| hero["name"] == params[:name].gsub('%20', ' ')}
+render partial: "heroe.json.jb", locals: {heroe: heroe}

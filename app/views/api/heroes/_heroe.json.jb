@@ -1,0 +1,10 @@
+{
+  name: heroe["name"],
+  weaponType: heroe["weaponType"],
+  moveType: heroe["moveType"],
+  hp: heroe["stats"]["40"]["5"]["hp"][1],
+  atk: heroe["stats"]["40"]["5"]["atk"][1],
+  spd: heroe["stats"]["40"]["5"]["spd"][1],
+  def: heroe["stats"]["40"]["5"]["def"][1],
+  res: heroe["stats"]["40"]["5"]["res"][1],
+}

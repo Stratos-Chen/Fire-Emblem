@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   #   get "/photos" => "photos#index"
   # end
   namespace :api do
-    get "/list_of_Fire_Emblem_games" => "games#showcase_info"
     get "/builds" => "builds#index"
     post "/builds" => "builds#create"
     get "/builds/:id" => "builds#show"
@@ -21,7 +20,7 @@ Rails.application.routes.draw do
     post "/sessions" => "sessions#create"
 
     get "/heroes" => "heroes#index"
-    get "/heroes/:id" => "heroes#show"
+    get "/heroes/:name" => "heroes#show"
 
     get "/skills" => "skills#index"
   end
