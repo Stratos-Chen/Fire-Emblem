@@ -7,6 +7,7 @@ class Api::BuildsController < ApplicationController
   end
   def create
     @build = Build.new(
+      name: params[:name],
       hero_name: params[:hero_name],
       hero_image_url: params[:hero_image_url],
       weapon_skill_name: params[:weapon_skill_name],
@@ -31,6 +32,7 @@ class Api::BuildsController < ApplicationController
 
   def update
     @build = Build.find_by(id: params[:id])
+    @build.name = params[:name] || @build.name
     @build.hero_name = params[:hero_name] || @build.hero_name
     @build.hero_image_url = params[:hero_image_url] || @build.hero_image_url
     @build.weapon_skill_name = params[:weapon_skill_name] || @build.weapon_skill_name

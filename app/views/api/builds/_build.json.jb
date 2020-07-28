@@ -1,5 +1,6 @@
 {
   id: build.id,
+  name: build.name,
   hero_name: build.hero_name,
   hero_image_url: build.hero_image_url,
   weapon_skill_name: build.weapon_skill_name,

@@ -1,5 +1,6 @@
 {
   name: heroe["name"],
+  origin: heroe["origin"],
   weaponType: heroe["weaponType"],
   moveType: heroe["moveType"],
   hp: heroe["stats"]["40"]["5"]["hp"][1],
