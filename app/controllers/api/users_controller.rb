@@ -2,7 +2,7 @@ class Api::UsersController < ApplicationController
   before_action :authenticate_user, except: [:create, :show]
 
   def show
-    @user = User.find_by(id: params[:id])
+    @user = current_user
     render "show.json.jb"
   end
 
@@ -21,25 +21,22 @@ class Api::UsersController < ApplicationController
   end
 
   def update
-    @user = User.find_by(id: params[:id])
-    if @user == current_user
-      @user = current_user
-      @user.email = params[:email] || @user.email
-      @user.username = params[:username] || @user.username
-      if params[:password]
-        @user.password = params[:password]
-        @user.password_confirmation = params[:password_confirmation]
-      end
-      if @user.save
-        render "show.json.jb"
-      else
-        render json: { errors: @user.errors.full_messages }, status: :bad_request
-      end
+    @user = current_user
+    @user.email = params[:email] || @user.email
+    @user.username = params[:username] || @user.username
+    if params[:password]
+      @user.password = params[:password]
+      @user.password_confirmation = params[:password_confirmation]
+    end
+    if @user.save
+      render "show.json.jb"
+    else
+      render json: { errors: @user.errors.full_messages }, status: :bad_request
     end
   end
 
   def destroy
-    @user = User.find_by(id: params[:id])
+    @user = current_user
     @user.destroy
     render json: {message: "User successfully destroyed!"}
   end

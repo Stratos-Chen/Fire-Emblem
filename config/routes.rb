@@ -13,10 +13,10 @@ Rails.application.routes.draw do
     patch "/builds/:id" => "builds#update"
     delete "/builds/:id" => "builds#destroy"
 
-    get "/users/:id" => "users#show"
+    get "/users/me" => "users#show"
     post "/users" => "users#create"
-    patch "/users/:id" => "users#update"
-    delete "/users/:id" => "users#destroy"
+    patch "/users/me" => "users#update"
+    delete "/users/me" => "users#destroy"
     post "/sessions" => "sessions#create"
 
     get "/heroes" => "heroes#index"
