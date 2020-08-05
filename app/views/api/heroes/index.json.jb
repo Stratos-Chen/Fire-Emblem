@@ -1,5 +1,4 @@
 
-heroes = JSON.parse(@heroes.body)["heroes"]
-heroes.map do |heroe|
+@heroes.map do |heroe|
   render partial: "heroe.json.jb", locals: {heroe: heroe}
 end
