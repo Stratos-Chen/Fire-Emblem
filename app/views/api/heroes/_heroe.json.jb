@@ -8,4 +8,5 @@
   spd: heroe["stats"]["40"]["5"]["spd"][1],
   def: heroe["stats"]["40"]["5"]["def"][1],
   res: heroe["stats"]["40"]["5"]["res"][1],
+  image_url: heroe["assets"]["portrait"]["150px"]
 }
