@@ -1,0 +1,748 @@
+/*
+Theme Name: Danish
+Author: TemplateNinja
+Description: Skin for danish theme
+*/
+
+/*
+	========================================
+	TABLE OF CONTENTS
+	========================================
+	
+	[0. IMPORT SOURCE]
+	[1. GLOBAL STYLE]
+	[2. TYPOGRAPHY]
+	[3. COMPONENT]
+		[3.1 BUTTON]
+		[3.2 SEARCH FORM]
+	[4. MAIN NAVIGATION]
+	[5. HEADER]
+	[6. FEATURED CATEGORY]
+	[7. CONTENT]
+	[8 COMMENT LIST]
+		[8.1 COMMENT LIST]
+		[8.2 COMMENT FORM]
+	[9. PAGINATION & NAVIGATION]
+	[10. ACCESSIBILITY]
+	[11. SIDEBAR]
+	[12. PORTFOLIO]
+	[13. FOOTER]
+
+*/
+
+
+/*
+	===========================
+	[0. IMPORT SOURCE]
+	===========================
+*/
+@import "variables.less";
+
+
+/* 
+	===========================
+	[1. GLOBAL STYLE]
+	===========================
+*/
+@theme-color: @yellow;
+@bg-color: @white;
+@text-color: @black;
+
+::-moz-selection { background: @theme-color; }
+::-webkit-selection { background: @theme-color; }
+::selection { background: @theme-color; }
+a{
+	color: darken(@theme-color, 2%);
+	&:hover{ color: darken(@theme-color, 15%); }
+}
+
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+	&:focus { color: darken(@theme-color, 12%); }
+}
+
+input[type="submit"],
+button{
+	background-color: @theme-color;
+	border: 1px solid darken(@theme-color, 10%);
+
+	&:hover,
+	&:focus,
+	&:active{
+		background-color: darken(@theme-color, 10%);
+		border-color: darken(@theme-color, 12%);
+	}
+}
+
+
+/*
+	===========================
+	[2. TYPOGRAPHY]
+	===========================
+*/
+.page-title{
+	h2{
+		&::after{ background-color: darken(@theme-color, 12%); }
+	}
+}
+
+
+/*
+	===========================
+	[3. COMPONENT]
+	===========================
+*/
+
+/*
+	===========================
+	[3.1 BUTTON]
+	===========================
+*/
+.btn-danish{
+	background-color: @theme-color;
+	border-color: darken(@theme-color, 12%);
+
+	&:hover,
+	&:focus,
+	&:active,
+	&.active,
+	.open > .dropdown-toggle&{
+		background-color: darken(@theme-color, 15%);
+		border-color: darken(@theme-color, 15%);
+	}
+
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] &,
+	&.disabled:hover,
+	&[disabled]:hover,
+	fieldset[disabled] &:hover,
+	&.disabled:focus,
+	&[disabled]:focus,
+	fieldset[disabled] &:focus,
+	&.disabled:active,
+	&[disabled]:active,
+	fieldset[disabled] &:active,
+	&.disabled.active,
+	&[disabled].active,
+	fieldset[disabled] &.active{
+		background-color: darken(@theme-color, 15%);
+		border-color: darken(@theme-color, 15%);
+	}
+	.badge{ color: @theme-color; }
+}
+
+/*
+	===========================
+	[3.2 SEARCH FORM]
+	===========================
+*/
+.search-form{
+	.search-submit{
+		border: 1px solid darken(@theme-color, 10%);
+		background-color: @theme-color;
+
+		&:hover,
+		&:focus{ background-color: darken(@theme-color, 10%); }
+	}
+}
+
+
+/*
+	===========================
+	[4. MAIN NAVIGATION]
+	===========================
+*/
+.site-header{
+	&.header-dark{
+		.main-navigation{
+			ul{
+				> li{
+					&:hover > a,
+					&.focus > a { color: @theme-color; }
+				}
+
+				ul{
+					a {
+						&:hover,
+						&.focus { color: @theme-color; }
+					}
+				}
+			}
+
+			@media screen and (max-width: 37.5em){
+
+				ul{
+					> li{
+						&:hover > a,
+						&.focus > a { color: @theme-color; }
+					}
+
+					ul{
+						a {
+							&:hover,
+							&.focus { color: @theme-color; }
+						}
+					}
+				}
+
+				li{
+					&.menu-item-has-children{
+						a{
+							&:hover,
+							&:focus{ color: @theme-color; }
+						}
+					}
+				}
+
+				a{
+					&:hover,
+					&:focus{
+						color: @theme-color;
+					}
+				}
+
+				.current_page_item > a,
+				.current-menu-item > a,
+				.current_page_ancestor > a,
+				.current-menu-ancestor > a {
+					color: @theme-color;
+				}
+			}
+		}
+	}
+}
+
+.main-navigation{
+	ul {
+		ul {
+			background-color: @theme-color;
+			a {
+				&:hover,
+				&.focus { background-color: darken(@theme-color, 10%); }
+			}
+		}
+	}
+
+	li {
+		&:hover > a,
+		&.focus > a { color: @theme-color; }
+
+		&.menu-item-has-children{
+			&:hover,
+			&:focus{ background-color: @theme-color; }
+		}
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a { color: @theme-color; }
+
+	@media screen and (max-width: 37.5em){
+		ul{
+			background-color: @white;
+			ul{
+				background-color: @white;
+				&:hover > a,
+				.focus > a { color: @theme-color; }
+
+				a {
+					&:hover,
+					&.focus { color: @theme-color; }
+				}
+			}
+		}
+
+		li {
+			&.menu-item-has-children{
+				&:hover,
+				&:focus{
+					background-color: @white;
+					color: @theme-color;
+					a{
+						&:hover,
+						&:focus{							
+							background-color: @white;
+							color: @theme-color; 
+						}
+					}
+				}
+			}
+		}
+
+		a {
+			&:hover,
+			&:focus{ color: @theme-color; }
+		}
+	}
+}
+
+
+/*
+	===========================
+	[5. HEADER]
+	===========================
+*/
+#header{
+	&.heading{
+		h2{
+			span{ color: @theme-color; }
+		}
+	}
+}
+
+/*
+	===========================
+	[6. FEATURED CATEGORY]
+	===========================
+*/
+.featured-container{
+	.featured-img{
+		h3{
+			a{
+				background-color: darken(@theme-color, 12%);
+				&:hover{ background-color: @theme-color; }
+			}
+		}
+	}
+}
+
+
+/*
+	===========================
+	[7. CONTENT]
+	===========================
+*/
+.post{
+	&-content{
+		blockquote{
+			background-color: darken(@theme-color, 12%);
+			&::before{ color: @theme-color; }
+		}
+
+		&.post-thumbnail{
+			&:hover{
+				&::after{ background-color: fade(@theme-color, 90%); }
+			}
+		}
+	}
+
+	&-atribut{
+		a{
+			&:hover,
+			&:focus,
+			&:hover .fa,
+			&:focus .fa,
+			&:hover .glyphicon,
+			&:focus .glyphicon{ color: darken(@theme-color, 12%); }
+		}
+	}
+
+	&.sticky{
+		&::before{
+			content: '';
+			border-top: 20px solid @theme-color;
+			border-right: 20px solid transparent;
+			border-bottom: 20px solid transparent;
+			border-left: 20px solid @theme-color;
+		}
+		&::after{ color: darken(@theme-color, 30%); }
+	}
+}
+
+/* more link */
+.more-link{
+	&:hover,
+	&:focus{
+		color: darken(@theme-color, 12%);
+		> .moretext{ color: darken(@theme-color, 12%); }
+	}
+}
+
+/* post-password */
+.post-password-form{
+	input[type="submit"]{
+		border: 1px solid darken(@theme-color, 12%);
+		background-color: @theme-color;
+		&:hover,
+		&:focus{
+			background-color: darken(@theme-color, 15%);
+			border-color: darken(@theme-color, 15%);
+		}
+	}
+}
+
+
+/*
+	===========================
+	[8. COMMENT]
+	===========================
+*/
+
+/*
+	===========================
+	[8.1 COMMENT LIST]
+	===========================
+*/
+.comment-navigation{
+	.nav-links{
+		.nav-previous,
+		.nav-next{
+			a{
+				&:hover{ background-color: @theme-color; }
+				&:focus{ background-color: darken(@theme-color, 12%); }
+			}
+		}
+	}
+}
+
+/*
+	===========================
+	[8.2 COMMENT FORM]
+	===========================
+*/
+.comment-form{
+	.form-control{
+		&:focus{
+			border-color: darken(@theme-color, 12%);
+			background: @theme-color;
+		}
+	}
+
+	input[type="submit"]{
+		&:focus{ background-color: darken(@theme-color, 15%); }
+	}
+
+	.logged-in-as{
+		a{
+			&:hover,
+			&:focus{ color: darken(@theme-color, 12%); }
+		}
+	}
+}
+
+
+/*
+	===========================
+	[9. PAGINATION & NAVIGATION]
+	===========================
+*/
+.post-navigation{
+	.nav-links{
+		.nav-previous,
+		.nav-next{
+			a{
+				&:hover,
+				&:focus{ background-color: @theme-color; }
+			}
+		}
+	}
+}
+
+.posts-navigation{
+	.nav-previous,
+	.nav-next{
+		a{
+			&:hover,
+			&:focus{
+				border-color: darken(@theme-color, 10%);
+				background-color: @theme-color;
+			}
+		}
+	}
+}
+
+.pagination{
+	.nav-links{
+		.current{ color: @theme-color; }
+	}
+}
+
+
+/*
+	===========================
+	[10. ACCESSIBILITY]
+	===========================
+*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	&:focus { color: darken(@theme-color, 15%); }
+}
+
+
+/*
+	===========================
+	[11. SIDEBAR]
+	===========================
+*/
+.widget{
+	ul{
+		li{
+			a{
+				&:hover{ color: darken(@theme-color, 10%); }
+			}
+		}
+	}
+
+	&_search{
+		.search-form{
+			.search-submit{
+				border: 1px solid darken(@theme-color, 10%);
+				background-color: @theme-color;
+				&:hover,
+				&:focus{ background-color: darken(@theme-color, 10%); }
+			}
+		}
+	}
+
+	&_nav_menu{
+		ul{
+			li{
+				&:hover{
+					&::after{ border-color: darken(@theme-color, 10%); }
+				}
+				a{
+					&:hover{ color: darken(@theme-color, 10%); }
+				}
+			}
+		}
+	}
+
+	&_recent_entries{
+		ul{
+			li{
+				a{
+					&:hover{
+						color: darken(@theme-color, 10%);
+						&::before{ color: darken(@theme-color, 10%); }
+					}
+				}
+			}
+		}
+	}
+
+	&_archive,
+	&_categories{
+		ul{
+			li{
+				a{
+					&:hover{
+						color: darken(@theme-color, 10%);
+						&::before{ color: darken(@theme-color, 10%); }
+					}
+				}
+			}
+		}
+	}
+
+	&_calendar{
+		#calendar_wrap{
+			table{
+				#today{ color: @theme-color; }
+				tbody{
+					a{
+						&:hover{ color: @theme-color; }
+					}
+				}
+			}
+		}
+	}
+
+	&_tag_cloud{
+		.tagcloud{
+			a{
+				color: darken(@theme-color, 10%);
+				&:hover{
+					border-color: darken(@theme-color, 15%);
+					background-color: darken(@theme-color, 10%);
+				}
+			}
+		}
+	}
+
+	&.danish_widget_popular_entries{
+		ul{
+			li{
+				.entry{
+					&-category{
+						a{ color: @theme-color; }
+					}
+				}
+			}
+		}
+	}
+
+	&.danish_widget_about{
+		.about-author-info{
+			.author-footer{
+				a{
+					&:hover{ color: darken(@theme-color, 10%); }
+				}
+			}
+		}
+	}
+}
+
+
+/*
+	===========================
+	[12. PORTFOLIO]
+	===========================
+*/
+.portfolio-page{
+	.portfolio-sort{
+		> li{
+			> a{
+				border: 1px solid @theme-color;
+				color: darken(@theme-color, 12%);
+				&:hover{ background-color: @theme-color; }
+			}
+		}
+
+		> .active{
+			> a{
+				&,
+				&:hover,
+				&:focus{ background-color: @theme-color; }
+			}
+		}
+	}
+}
+
+.container-portfolio{
+	> li{
+		> .portfolio-item{
+			> .portfolio-caption{
+				> .portfolio-text{
+					.portfolio-meta{
+						a{ 
+							&:hover{ color: darken(@theme-color, 5%); }
+						}
+					}
+					h3{ color: darken(@theme-color, 10%); }
+				}
+			}
+		}
+	}
+}
+
+
+/*
+	==================
+	[13. FOOTER]
+	==================
+*/
+.site-footer{
+	.widget{
+		ul{
+			li{
+				a{
+					&:hover{ color: darken(@theme-color, 10%); }
+				}
+			}
+		}
+
+		&_nav_menu{
+			ul{
+				li{
+					&:hover{
+						&::after{ border-color: darken(@theme-color, 10%); }
+					}
+					a{
+						&:hover{ color: darken(@theme-color, 10%); }
+					}
+				}
+			}
+		}
+
+		&_recent_entries{
+			ul{
+				li{
+					a{
+						&:hover{ color: darken(@theme-color, 10%); }
+					}
+				}
+			}
+		}
+
+		&_recent_comments{
+			ul{
+				li{
+					&:hover{
+						&::before{ color: darken(@theme-color, 10%); }
+					}
+				}
+			}
+		}
+
+		&_archive,
+		&_categories{
+			ul{
+				li{
+					a{
+						&:hover{ color: darken(@theme-color, 10%); }
+					}
+				}
+			}
+		}
+
+		&_calendar{
+			#calendar_wrap{
+				table{
+					#today{ color: darken(@theme-color, 10%); }
+					tbody{
+						a{
+							&:hover{ color: darken(@theme-color, 10%); }
+						}
+					}
+					tfoot{
+						a{
+							&:hover{ color: darken(@theme-color, 10%); }
+						}
+					}
+				}
+			}
+		}
+
+		&_tag_cloud{
+			.tagcloud{
+				a{
+					&:hover{
+						border-color: darken(@theme-color, 15%);
+						background-color: darken(@theme-color, 10%);
+					}
+				}
+			}
+		}
+
+		&.danish_widget_popular_entries{
+			ul{
+				li{
+					.entry{
+						&-title{
+							a{
+								&:hover{ color: darken(@theme-color, 10%); }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
